@@ -1,0 +1,40 @@
+
+[SneakyTreeGrowing]
+	#Increasing this value will change the area-of-effect from the mod
+	#Default value: 6
+	#Range: 1 ~ 1000
+	Tree-Meal-Radius = 1
+	#Changing this value will change the chance if a bonemeal effect gets applied or not
+	#Default value: 15
+	#Range: 1 ~ 100
+	Tree-Meal-Chance = 15
+
+	[SneakyTreeGrowing.Crop-Settings]
+		#Changing this value to true will allow the mod to apply the bonemeal effect to crops like wheat and potato. Only works on Vannila plants
+		#Default value: false
+		Crop-Meal-Allowed = false
+		#Increasing this value will change the area-of-effect from the crop meal effect
+		#Default value: 6
+		#Range: 1 ~ 25
+		Crop-Meal-Radius = 6
+		#Changing this value will change the chance if a bonemeal effect gets applied to crops or not
+		#Default value: 5
+		#Range: 1 ~ 50
+		Crop-Meal-Chance = 5
+
+	[SneakyTreeGrowing.Custom-Tag]
+		#Enable Custom tag support for the mod. (WIP)
+		#Default value: false
+		Enable-Custom-Tags = true
+		#All values added in this list will result in support for the bonemeal effect. 
+		#Example: ["forge:seeds", "minecraft:crops"]
+		Custom-Tags = ["minecraft:crops", "minecraft:saplings"]
+		#Increasing this value will change the area-of-effect from the custom-tag meal effect
+		#Default Value: 6
+		#Range: 1 ~ 1000
+		Custom-Tags-Meal-Radius = 60
+		#Changing this value will change the chance if a bonemeal effect gets applied to custom tags or not
+		#Default Value: 15
+		#Range: 1 ~ 1000
+		Custom-Tags-Meal-Chance = 15
+
