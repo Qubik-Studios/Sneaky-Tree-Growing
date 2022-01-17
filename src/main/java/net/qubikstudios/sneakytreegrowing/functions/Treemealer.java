@@ -73,9 +73,6 @@ public class Treemealer {
                                                 _level.levelEvent(2005, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), 0);
                                         }
                                     }
-                                    for (int index3 = 0; index3 < 3; index3++) {
-                                        world.addParticle(ParticleTypes.HAPPY_VILLAGER, (entity.getX() + sx), (entity.getY() + sy), (entity.getZ() + sz), 0, 1, 0);
-                                    }
                                 }
                                 sz = sz + 1;
                             }

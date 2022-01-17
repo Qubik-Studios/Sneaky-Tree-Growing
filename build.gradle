@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.7.0'
+version = '1.18.1-1.7.1'
 group = 'net.qubikstudios.sneakytreegrowing'
 archivesBaseName = 'sneaky_tree_growing'
 
@@ -72,7 +72,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.10'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.43'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
