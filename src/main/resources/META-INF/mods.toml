@@ -1,10 +1,10 @@
 modLoader = "javafml"
 loaderVersion = "[39,)"
-license = "GNU Lesser General Public License version 3 (LGPLv3)"
+license = "GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.7.0"
+version = "1.7.1"
 displayName = "Sneaky Tree Growing"
 credits = "A Qubik Studios Project"
 displayURL = "https://qubik-studios.net"
@@ -24,7 +24,7 @@ side = "BOTH"
 [[dependencies.sneaky_tree_growing]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.1,1.19)"
+versionRange = "[1.18.1,)"
 ordering = "NONE"
 side = "BOTH"
 
