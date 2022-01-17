@@ -1,26 +1,24 @@
 package net.qubikstudios.sneakytreegrowing.functions;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.BoneMealItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BoneMealItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.GameType;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.GameType;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.qubikstudios.sneakytreegrowing.config.MainConfig;
 
 import java.util.Objects;
 
 public class CustomtagMealer {
-
-    public static void execute(LevelAccessor world, Entity entity) {
+    public static void execute(World world, Entity entity) {
 
         if (entity == null) return;
         double sx;
@@ -32,14 +30,14 @@ public class CustomtagMealer {
         double chance_raw = 0;
         double chance;
         if (MainConfig.COMMON.customTagMealRadius.get() < 1) {
-            if (world instanceof Level) {
+            if (world != null) {
                 value_raw = 2;
             }
         } else {
             value_raw = MainConfig.COMMON.customTagMealRadius.get();
         }
         if (MainConfig.COMMON.customTagMealChance.get() > 50) {
-            if (world instanceof Level) {
+            if (world != null) {
                 chance_raw = 50;
             }
         } else {
@@ -48,12 +46,12 @@ public class CustomtagMealer {
         chance = chance_raw / 100;
         value_pos = value_raw;
         value_neg = value_raw / (-2);
-        for (String s: MainConfig.COMMON.customTag.get()) {
+        for (String s : MainConfig.COMMON.customTag.get()) {
             if (!(new Object() {
                 public boolean checkGamemode(Entity _ent) {
-                    if (_ent instanceof ServerPlayer _serverPlayer) {
+                    if (_ent instanceof ServerPlayerEntity _serverPlayer) {
                         return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-                    } else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+                    } else if (_ent.level.isClientSide() && _ent instanceof PlayerEntity _player) {
                         return Objects.requireNonNull(Minecraft.getInstance().getConnection()).getPlayerInfo(_player.getGameProfile().getId()) != null && Objects.requireNonNull(Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())).getGameMode() == GameType.SPECTATOR;
                     }
                     return false;
@@ -68,8 +66,8 @@ public class CustomtagMealer {
                             for (int index1 = 0; index1 < (int) (value_pos); index1++) {
                                 sz = value_neg;
                                 for (int index2 = 0; index2 < (int) (value_pos); index2++) {
-                                    if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation(s)).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock()) || BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:sneakytreegrowingallowed")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
-                                        if (world instanceof Level _level) {
+                                    if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation(s)).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
+                                        if (world instanceof ServerWorld _level) {
                                             if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz))) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), null)) {
                                                 if (!_level.isClientSide())
                                                     _level.levelEvent(2005, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), 0);
@@ -89,5 +87,4 @@ public class CustomtagMealer {
             }
         }
     }
-
 }

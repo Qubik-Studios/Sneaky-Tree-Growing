@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.18.1-1.7.1'
+version = '1.16.5-1.7.1'
 group = 'net.qubikstudios.sneakytreegrowing'
 archivesBaseName = 'sneaky_tree_growing'
 
@@ -21,7 +21,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: '1.16.5'
     runs {
         client {
             workingDirectory project.file('run')
@@ -72,7 +72,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.43'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

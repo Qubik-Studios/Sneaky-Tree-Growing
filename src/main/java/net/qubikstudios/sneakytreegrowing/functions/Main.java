@@ -1,6 +1,6 @@
 package net.qubikstudios.sneakytreegrowing.functions;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraft.entity.Entity;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,5 +23,4 @@ public class Main {
             Treemealer.execute(entity.level, entity);
         }
     }
-
 }
