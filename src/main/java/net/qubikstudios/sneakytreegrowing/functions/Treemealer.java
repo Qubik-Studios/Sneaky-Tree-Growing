@@ -66,7 +66,7 @@ public class Treemealer {
                         for (int index1 = 0; index1 < (int) (value_pos); index1++) {
                             sz = value_neg;
                             for (int index2 = 0; index2 < (int) (value_pos); index2++) {
-                                if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("minecraft:saplings")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock()) || BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:sneakytreegrowingallowed")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
+                                if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("minecraft:saplings")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
                                     if (world instanceof Level _level) {
                                         if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz))) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), null)) {
                                             if (!_level.isClientSide())
