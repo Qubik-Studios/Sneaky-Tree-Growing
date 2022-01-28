@@ -48,9 +48,11 @@ public class Treemealer {
         value_neg = value_raw / (-2);
         if (!(new Object() {
             public boolean checkGamemode(Entity _ent) {
-                if (_ent instanceof ServerPlayerEntity _serverPlayerEntity) {
+                if (_ent instanceof ServerPlayerEntity) {
+                    ServerPlayerEntity _serverPlayerEntity = (ServerPlayerEntity) _ent;
                     return _serverPlayerEntity.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-                } else if (_ent.level.isClientSide() && _ent instanceof PlayerEntity _player) {
+                } else if (_ent.level.isClientSide() && _ent instanceof PlayerEntity) {
+                    PlayerEntity _player = (PlayerEntity) _ent;
                     return Objects.requireNonNull(Minecraft.getInstance().getConnection()).getPlayerInfo(_player.getGameProfile().getId()) != null && Objects.requireNonNull(Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())).getGameMode() == GameType.SPECTATOR;
                 }
                 return false;
@@ -65,8 +67,10 @@ public class Treemealer {
                         for (int index1 = 0; index1 < (int) (value_pos); index1++) {
                             sz = value_neg;
                             for (int index2 = 0; index2 < (int) (value_pos); index2++) {
-                                if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("minecraft:saplings")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock()) || BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:sneakytreegrowingallowed")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
-                                    if (world instanceof ServerWorld _level) {
+                                assert world != null;
+                                if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation("minecraft:saplings")).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
+                                    if (world instanceof ServerWorld) {
+                                        ServerWorld _level = (ServerWorld) world;
                                         if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz))) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), null)) {
                                             if (!_level.isClientSide())
                                                 _level.levelEvent(2005, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), 0);

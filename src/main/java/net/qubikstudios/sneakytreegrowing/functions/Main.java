@@ -14,8 +14,6 @@ public class Main {
         if (event.phase == TickEvent.Phase.END) {
             Entity entity = event.player;
             
-            if (!entity.isShiftKeyDown()) return;
-            
             if (MainConfig.COMMON.cropMealRule.get()) Cropmealer.execute(entity.level, entity);
             
             if (MainConfig.COMMON.enableCustomTag.get()) CustomtagMealer.execute(entity.level, entity);

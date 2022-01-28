@@ -49,9 +49,11 @@ public class CustomtagMealer {
         for (String s : MainConfig.COMMON.customTag.get()) {
             if (!(new Object() {
                 public boolean checkGamemode(Entity _ent) {
-                    if (_ent instanceof ServerPlayerEntity _serverPlayer) {
+                    if (_ent instanceof ServerPlayerEntity) {
+                        ServerPlayerEntity _serverPlayer = (ServerPlayerEntity) _ent;
                         return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-                    } else if (_ent.level.isClientSide() && _ent instanceof PlayerEntity _player) {
+                    } else if (_ent.level.isClientSide() && _ent instanceof PlayerEntity) {
+                        PlayerEntity _player = (PlayerEntity) _ent;
                         return Objects.requireNonNull(Minecraft.getInstance().getConnection()).getPlayerInfo(_player.getGameProfile().getId()) != null && Objects.requireNonNull(Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())).getGameMode() == GameType.SPECTATOR;
                     }
                     return false;
@@ -66,8 +68,10 @@ public class CustomtagMealer {
                             for (int index1 = 0; index1 < (int) (value_pos); index1++) {
                                 sz = value_neg;
                                 for (int index2 = 0; index2 < (int) (value_pos); index2++) {
+                                    assert world != null;
                                     if (BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation(s)).contains((world.getBlockState(new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)))).getBlock())) {
-                                        if (world instanceof ServerWorld _level) {
+                                        if (world instanceof ServerWorld) {
+                                            ServerWorld _level = (ServerWorld) world;
                                             if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz))) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), null)) {
                                                 if (!_level.isClientSide())
                                                     _level.levelEvent(2005, new BlockPos((int) (entity.getX() + sx), (int) (entity.getY() + sy), (int) (entity.getZ() + sz)), 0);
