@@ -75,8 +75,6 @@ If you want to republish this mod on a other platform you have to join our Disco
 Reselling of this mod is prohibited! If you bought this mod please join our Discord and report the person who was selling this to you.
 
 ## Need Help? Join our Discord!
-The Installation process of the QuBOT Engine is easy and simple!
-In the docs you can find how to install the Bot and the basic setup.
 <div align="center">
     <a href="http://discord.qubik-studios.net" target="_blank" rel="noopener noreferrer"><img src="https://discordapp.com/api/guilds/759767022916599808/embed.png?style=banner3" alt="Discord" width="320" height="140" /></a>
     <br>
