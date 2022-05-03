@@ -1,15 +1,15 @@
 modLoader = "javafml"
-loaderVersion = "[39,)"
+loaderVersion = "[40,)"
 license = "GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.7.2"
+version = "1.8.0"
 displayName = "Sneaky Tree Growing"
 credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
-authors = "ConmineLP"
+authors = "Qubik Studios"
 description = '''
 Sneak to grow Trees!
 '''
@@ -17,14 +17,14 @@ Sneak to grow Trees!
 [[dependencies.sneaky_tree_growing]]
 modId = "forge"
 mandatory = true
-versionRange = "[39,)"
+versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.sneaky_tree_growing]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.1,)"
+versionRange = "[1.18.2,)"
 ordering = "NONE"
 side = "BOTH"
 

@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300px" src="https://qubik-studios.net/wp-content/uploads/2021/08/Sneaky-Tree-Growing-logo.png">
+    <img width="300px" src="https://qubik-studios.net/wp-content/uploads/2022/05/STG-Flat.png">
 </p>
 
 <h1 align="center">Sneaky Tree Growing</h1>
@@ -68,6 +68,7 @@ An example how you use the custom tag system is in the Config.
   #Default value: false
   Enable-Custom-Tags = true
 ```
+The Config is located at: "/<YourMCFolder>/config/Qubik Studios Mods/sneakytreegrowing.toml"
 
 ## Note on Modpack creators and Disseminator
 You can use this mod for free in your Modpack. Just make sure to credit this mod.
