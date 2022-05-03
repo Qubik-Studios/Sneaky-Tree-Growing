@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300px" src="https://qubik-studios.net/wp-content/uploads/2022/05/STG-Flat.png">
+    <img width="500px" src="https://qubik-studios.net/wp-content/uploads/2022/05/STG-Flat.png">
 </p>
 
 <h1 align="center">Sneaky Tree Growing</h1>
