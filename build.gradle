@@ -15,7 +15,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-1.7.2'
+version = '1.18.2-1.8.0'
 group = 'net.qubikstudios.sneakytreegrowing'
 archivesBaseName = 'sneaky_tree_growing'
 
