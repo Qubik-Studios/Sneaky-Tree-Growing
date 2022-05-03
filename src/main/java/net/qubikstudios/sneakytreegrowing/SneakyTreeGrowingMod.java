@@ -16,13 +16,13 @@ import org.apache.logging.log4j.Logger;
 @Mod("sneaky_tree_growing")
 public class SneakyTreeGrowingMod {
 
-    public static final String VERSION = "1.18.1-1.7.1";
+    public static final String VERSION = "1.18.2-1.7.2";
     private static final Logger LOGGER = LogManager.getLogger();
 
     public SneakyTreeGrowingMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfig.COMMON_SPEC, "sneakytreegrowing.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfig.COMMON_SPEC, "Qubik Studios Mods/sneakytreegrowing.toml");
         MinecraftForge.EVENT_BUS.register(this);
     }
 

@@ -4,9 +4,9 @@ license = "GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.7.1"
+version = "1.7.2"
 displayName = "Sneaky Tree Growing"
-credits = "A Qubik Studios Project"
+credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
 authors = "ConmineLP"

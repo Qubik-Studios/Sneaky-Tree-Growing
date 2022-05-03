@@ -11,14 +11,16 @@ public class Main {
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            Entity entity = event.player;
-            
-            if (MainConfig.COMMON.cropMealRule.get()) Cropmealer.execute(entity.level, entity);
-            
-            if (MainConfig.COMMON.enableCustomTag.get()) CustomtagMealer.execute(entity.level, entity);
-            
-            Treemealer.execute(entity.level, entity);
+        if (!event.player.isSpectator()) {
+            if (event.phase == TickEvent.Phase.END) {
+                Entity entity = event.player;
+
+                if (MainConfig.COMMON.cropMealRule.get()) Cropmealer.execute(entity.level, entity);
+
+                if (MainConfig.COMMON.enableCustomTag.get()) CustomtagMealer.execute(entity.level, entity);
+
+                Treemealer.execute(entity.level, entity);
+            }
         }
     }
 

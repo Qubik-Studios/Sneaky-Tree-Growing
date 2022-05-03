@@ -71,7 +71,7 @@ public final class MainConfig {
                     .defineInRange("Custom-Tags-Meal-Radius", defaultCustomTagMealRadius, 1, 1000);
 
             this.customTagMealChance = builder.comment("Changing this value will change the chance if a bonemeal effect gets applied to custom tags or not\nDefault Value: " + defaultCustomTagMealChance)
-                    .defineInRange("Custom-Tags-Meal-Chance", defaultCustomTagMealChance, 1, 1000);
+                    .defineInRange("Custom-Tags-Meal-Chance", defaultCustomTagMealChance, 1, 100);
 
             builder.pop();
             builder.pop();
