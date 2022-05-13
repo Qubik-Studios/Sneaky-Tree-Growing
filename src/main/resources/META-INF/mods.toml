@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
-license = "GNU General Public License version 3 (GPLv3)"
+license = "GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
