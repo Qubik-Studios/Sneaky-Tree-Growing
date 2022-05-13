@@ -14,8 +14,12 @@
 </p>
 
 ## Downloads
-You can find downloads here on CurseForge.
+You can find downloads in the list below or by Compiling from source.
 There is no alternative download links/pages that are official maintained by Qubik Studios when they are not shown here.
+
+### Downloades
+<a href="https://www.curseforge.com/minecraft/mc-mods/sneaky-tree-growing">CurseForge</a>
+<a href="https://modrinth.com/mod/sneaky-tree-growing">Modrinth</a>
 
 ## Features
 Sneak in a 6x6 area to apply Saplings a Bonemeal effect.
