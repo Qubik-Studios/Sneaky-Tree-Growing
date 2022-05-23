@@ -9,7 +9,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/v/release/Qubik-Studios/Sneaky-Tree-Growing?include_prereleases&style=flat-square" alt="Current Release">
     <img src="https://img.shields.io/discord/759767022916599808?label=Discord&style=flat-square" alt="Discord">
-    <img src="https://img.shields.io/github/languages/code-size/Qubik-Studios/Sneaky-Tree-Growing/tree/1.18.2-1.9.0-(MultiplatformUpdate)?style=flat-square" alt="Code size">
+    <img src="https://img.shields.io/github/languages/code-size/Qubik-Studios/Sneaky-Tree-Growing?style=flat-square" alt="Code size">
     <img alt="GitHub" src="https://img.shields.io/github/license/Qubik-Studios/Sneaky-Tree-Growing?style=flat-square">
 </p>
 
