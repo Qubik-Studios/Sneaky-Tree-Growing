@@ -4,15 +4,14 @@ license = "GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.8.0"
+version = "1.9.0"
 displayName = "Sneaky Tree Growing"
 credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
 authors = "Qubik Studios"
-description = '''
-Sneak to grow Trees!
-'''
+description = "Sneak to grow Trees!"
+
 
 [[dependencies.sneaky_tree_growing]]
 modId = "forge"

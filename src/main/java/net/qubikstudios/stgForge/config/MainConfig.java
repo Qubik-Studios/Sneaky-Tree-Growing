@@ -1,4 +1,4 @@
-package net.qubikstudios.sneakytreegrowing.config;
+package net.qubikstudios.stgForge.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
@@ -35,7 +35,7 @@ public final class MainConfig {
         public final ForgeConfigSpec.IntValue cropMealChance;
         public final ForgeConfigSpec.IntValue customTagMealRadius;
         public final ForgeConfigSpec.IntValue customTagMealChance;
-        public final ForgeConfigSpec.BooleanValue cropMealRule;
+        public final ForgeConfigSpec.BooleanValue enableCropMeal;
 
         public final ForgeConfigSpec.BooleanValue enableCustomTag;
         public final ForgeConfigSpec.ConfigValue<ArrayList<String>> customTag;
@@ -51,8 +51,8 @@ public final class MainConfig {
             builder.push("Crop-Settings");
             builder.comment("These settings are only used when \"Crop-Meal-Allowed\" is set to true");
 
-            this.cropMealRule = builder.comment("Changing this value to true will allow the mod to apply the bonemeal effect to crops like wheat and potato. Only works on Vannila plants\nDefault value: " + defaultCropMealRule)
-                    .define("Crop-Meal-Allowed", defaultCropMealRule);
+            this.enableCropMeal = builder.comment("Changing this value to true will allow the mod to apply the bonemeal effect to crops like wheat and potato. Only works on Vannila plants\nDefault value: " + defaultCropMealRule)
+                    .define("Enable-Crop-Meal", defaultCropMealRule);
             this.cropMealRadius = builder.comment("Increasing this value will change the area-of-effect from the crop meal effect\nDefault value: " + defaultCropMealRadius)
                     .defineInRange("Crop-Meal-Radius", defaultCropMealRadius, 1, 25);
             this.cropMealChance = builder.comment("Changing this value will change the chance if a bonemeal effect gets applied to crops or not\nDefault value: " + defaultCropMealChance)
