@@ -5,23 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c91b0217-54b4-4ff9-86b8-6632c42b3efb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/qubikstudios/stgForge/SneakyTreeGrowingMod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/qubikstudios/stgForge/config/MainConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/qubikstudios/stgForge/functions/Core.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/qubikstudios/stgForge/functions/Trigger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Sneaky-Tree-Growing.Forge.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Sneaky-Tree-Growing.Forge.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Sneaky-Tree-Growing.Fabric/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,21 +77,6 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Sneaky-Tree-Growing" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Sneaky-Tree-Growing" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Sneaky-Tree-Growing" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Sneaky-Tree-Growing.Fabric" type="f1a62948:ProjectNode" />
               </path>
               <path>
@@ -144,7 +123,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "D:/github/stg/Sneaky-Tree-Growing/Sneaky-Tree-Growing.Sponge",
+    "last_opened_file_path": "D:/github/stg/Sneaky-Tree-Growing/Sneaky-Tree-Growing.Fabric",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.38089758",
@@ -153,11 +132,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\stg\Sneaky-Tree-Growing\Sneaky-Tree-Growing.Fabric\gradle\wrapper" />
       <recent name="D:\github\stg\Sneaky-Tree-Growing\src\main\java\net\qubikstudios" />
       <recent name="D:\github\stg\Sneaky-Tree-Growing\src\main\java" />
       <recent name="D:\github\stg\Sneaky-Tree-Growing\src\main\java\net\qubikstudios\stgForge\functions" />
       <recent name="D:\github\stg\Sneaky-Tree-Growing\src\api" />
-      <recent name="D:\github\stg\Sneaky-Tree-Growing\src\api\main\java\net.qubikstudios.stg-core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\github\stg\Sneaky-Tree-Growing\STG-Forge" />
@@ -170,7 +149,7 @@
       <recent name="net.qubikstudios.stgForge.functions" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Forge [CLIENT]">
+  <component name="RunManager" selected="Gradle.Fabric [BUILD]">
     <configuration name="Fabric [BUILD]" type="GradleRunConfiguration" factoryName="Gradle" folderName="Fabric">
       <ExternalSystemSettings>
         <option name="executionName" />
