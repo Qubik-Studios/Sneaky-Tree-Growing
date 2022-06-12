@@ -7,9 +7,6 @@ import java.util.ArrayList;
 
 
 public final class MainConfig {
-
-    // TODO new Config System || The Config System from Fabric Port
-
     public static final Common COMMON;
     public static final ForgeConfigSpec COMMON_SPEC;
 

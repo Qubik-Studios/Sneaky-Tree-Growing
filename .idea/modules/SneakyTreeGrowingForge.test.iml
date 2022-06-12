@@ -12,6 +12,9 @@
     </facet>
   </component>
   <component name="McpModuleSettings">
-    <option name="srgType" value="SRG" />
+    <option name="mappingFile" value="D:\github\stg\Sneaky-Tree-Growing\SneakyTreeGrowingForge\build\createMcpToSrg\output.tsrg" />
+    <option name="mcpVersion" value="official_1.19" />
+    <option name="minecraftVersion" value="1.19" />
+    <option name="srgType" value="TSRG" />
   </component>
 </module>

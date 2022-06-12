@@ -29,11 +29,10 @@ public class Core {
                 for (int b = 0; b < (int) (value_raw); b++) {
                     z = value_raw / (-2);
                     for (int c = 0; c < (int) (value_raw); c++) {
-                        BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y), (int) (entity.getZ() + z));
+                        BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y + 1), (int) (entity.getZ() + z));
                         if (world.getBlockState(pos).getBlock() != Blocks.AIR) {
                             if (world instanceof Level _level && world.getBlockState(pos).getTags().toList().toString().contains(tag)) {
-                                if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, pos)) {
-                                    BoneMealItem.addGrowthParticles(_level, pos, 2);
+                                if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), _level, pos, null)) {
                                     if (!_level.isClientSide()) _level.levelEvent(2005, pos, 0);
                                 }
                             }

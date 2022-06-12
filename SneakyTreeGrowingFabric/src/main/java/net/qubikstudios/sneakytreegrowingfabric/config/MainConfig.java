@@ -1,6 +1,7 @@
 package net.qubikstudios.sneakytreegrowingfabric.config;
 
 import net.qubikstudios.sneakytreegrowingfabric.SneakyTreeGrowingMod;
+import org.jetbrains.annotations.NotNull;
 import org.simpleyaml.configuration.file.YamlFile;
 
 import java.io.File;
@@ -68,10 +69,10 @@ public class MainConfig {
                 Default Value: 15
                 Range: 1 ~ 1000""");
         yamlFile.addDefault("SneakyTreeGrowing.Custom-Tag.Custom-Tags-Meal-Chance", 15);
-        yamlFile.setComment("SneakyTreeGrowing.Custom-Tags", """
+        yamlFile.setComment("SneakyTreeGrowing.Custom-Tag.Tag-List", """
                 All values added in this list will result in support for the bonemeal effect""");
-        final java.util.List<String> list = java.util.List.of("example:tag1 example:tag2".split("[\\s]+"));
-        yamlFile.addDefault("SneakyTreeGrowing.Custom-Tags", list);
+        final java.util.List<String> list = java.util.List.of("example:tag1 example:tag2".split("\s"));
+        yamlFile.addDefault("SneakyTreeGrowing.Custom-Tag.Tag-List", list);
 
         try {
             yamlFile.save();
@@ -80,7 +81,7 @@ public class MainConfig {
         }
     }
 
-    public static boolean getBoolean(String value) {
+    public static @NotNull Boolean getBoolean(String value) {
         try {
             yamlFile.load();
         } catch (final Exception e) {
@@ -89,7 +90,7 @@ public class MainConfig {
         return yamlFile.getBoolean(value);
     }
 
-    public static int getInt(String value) {
+    public static @NotNull Integer getInt(String value) {
         try {
             yamlFile.load();
         } catch (final Exception e) {
@@ -98,7 +99,7 @@ public class MainConfig {
         return yamlFile.getInt(value, 0);
     }
 
-    public static List<?> getArray(String value) {
+    public static @NotNull List<?> getArray(String value) {
         try {
             yamlFile.load();
         } catch (final Exception e) {

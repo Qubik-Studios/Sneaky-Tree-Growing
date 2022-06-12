@@ -10,9 +10,8 @@ public class Trigger {
         ClientTickEvents.END_CLIENT_TICK.register((event) -> {
             if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused()) return;
             Entity entity = event.player;
-            String tag = "minecraft:saplings";
             Core.execute(entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Radius"),
-                    MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Chance"), tag);
+                    MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Chance"), "minecraft:saplings");
         });
     }
 
@@ -20,10 +19,8 @@ public class Trigger {
         ClientTickEvents.END_CLIENT_TICK.register((event) -> {
             if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused()) return;
             Entity entity = event.player;
-            String tag = "minecraft:crops";
-            // TODO Config einbinden
             Core.execute(entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Crop-Meal-Radius"),
-                    MainConfig.getInt("SneakyTreeGrowing.Crop-Meal-Chance"), tag);
+                    MainConfig.getInt("SneakyTreeGrowing.Crop-Meal-Chance"), "minecraft:crops");
         });
     }
 
@@ -31,9 +28,7 @@ public class Trigger {
         ClientTickEvents.END_CLIENT_TICK.register((event) -> {
             if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused()) return;
             Entity entity = event.player;
-            // TODO Config einbinden
-
-            for (Object tag : MainConfig.getArray("SneakyTreeGrowing.Custom-Tags")) {
+            for (Object tag : MainConfig.getArray("SneakyTreeGrowing.Custom-Tag.Tag-List")) {
                 Core.execute(entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Custom-Tag.Custom-Tags-Meal-Radius"),
                         MainConfig.getInt("SneakyTreeGrowing.Custom-Tag.Custom-Tags-Meal-Chance"), tag.toString());
             }

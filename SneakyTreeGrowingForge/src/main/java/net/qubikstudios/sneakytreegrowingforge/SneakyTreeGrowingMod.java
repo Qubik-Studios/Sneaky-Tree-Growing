@@ -15,11 +15,12 @@ import org.apache.logging.log4j.Logger;
 @Mod("sneaky_tree_growing")
 public class SneakyTreeGrowingMod {
 
-    public static final String VERSION = "FORGE-1.18.2-1.9.0";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final String VERSION = "FORGE-1.19-1.9.0";
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public SneakyTreeGrowingMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfig.COMMON_SPEC, "Qubik Studios Mods/sneakytreegrowing.toml");
         MinecraftForge.EVENT_BUS.register(this);

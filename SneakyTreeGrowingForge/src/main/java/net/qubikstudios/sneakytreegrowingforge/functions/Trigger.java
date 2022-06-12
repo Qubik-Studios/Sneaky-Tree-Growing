@@ -10,25 +10,23 @@ public class Trigger {
     public static void treeMealer(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
-        String tag = "minecraft:saplings";
-        Core.execute(entity.level, entity, MainConfig.COMMON.cropMealRadius.get(),
-                (double) MainConfig.COMMON.cropMealChance.get(), tag);
+        Core.execute(entity.level, entity, MainConfig.COMMON.treeMealRadius.get(),
+                MainConfig.COMMON.treeMealChance.get(), "minecraft:saplings");
     }
 
     public static void cropMealer(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
-        String tag = "minecraft:crops";
         Core.execute(entity.level, entity, MainConfig.COMMON.cropMealRadius.get(),
-                (double) MainConfig.COMMON.cropMealChance.get(), tag);
+                MainConfig.COMMON.cropMealChance.get(), "minecraft:crops");
     }
 
     public static void customTagMealer(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
         for (String tag : MainConfig.COMMON.customTag.get()) {
-            Core.execute(entity.level, entity, MainConfig.COMMON.cropMealRadius.get(),
-                    (double) MainConfig.COMMON.cropMealChance.get(), tag);
+            Core.execute(entity.level, entity, MainConfig.COMMON.customTagMealRadius.get(),
+                    MainConfig.COMMON.customTagMealChance.get(), tag);
         }
     }
 }
