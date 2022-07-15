@@ -5,38 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23b1c22-f363-4ae9-ae7d-79b52cafad93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/net.qubikstudios.Sneaky-Tree-Growing.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/net.qubikstudios.Sneaky-Tree-Growing.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/stg-spigot.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/SneakyTreeGrowingMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/SneakyTreeGrowingMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/src/main/java/net/qubikstudios/sneakytreegrowingspigot/Sneakytreegrowingspigot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/src/main/java/net/qubikstudios/stgSpigot/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSpigot/src/main/resources/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/src/main/java/net/qubikstudios/sneakytreegrowingsponge/Sneakytreegrowingsponge.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingSponge/src/main/java/net/qubikstudios/stgSponge/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/resources/fabric.mod.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,24 +92,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "temurin-17",
-    "last_opened_file_path": "D:/github/fullbright",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.38089758"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/github/fullbright&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.38089758&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\github\stg\Sneaky-Tree-Growing\SneakyTreeGrowingFabric\src\main\resources\assets\modid" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Fabric [runClient]">
+  <component name="RunManager" selected="Gradle.Fabric [build]">
     <configuration name="Fabric [build]" type="GradleRunConfiguration" factoryName="Gradle" folderName="Fabric">
       <ExternalSystemSettings>
         <option name="executionName" />

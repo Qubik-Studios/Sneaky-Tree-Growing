@@ -47,10 +47,9 @@ public class Core {
                         BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y), (int) (entity.getZ() + z));
                         if (world.getBlockState(pos).getBlock() != Blocks.AIR) {
                             if (world instanceof Level _level && world.getBlockState(pos).getTags().toList().toString().contains(tag)) {
-                                BlockState state = world.getBlockState(pos);
-                                world.scheduleTick(pos, state.getBlock(), 0);
-                                BoneMealItem.addGrowthParticles(_level, pos, 1);
-                                if (!_level.isClientSide) _level.levelEvent(2005, pos, 0);
+                                if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, pos)) {
+                                    if (!_level.isClientSide()) _level.levelEvent(2005, pos, 0);
+                                }
                             }
                         }
                         z = z + 1;
