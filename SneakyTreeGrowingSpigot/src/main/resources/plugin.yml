@@ -1,4 +1,0 @@
-name: Sneaky-Tree-Growing Spigot
-version: '${version}'
-main: net.qubikstudios.stgSpigot.main
-api-version: 1.18

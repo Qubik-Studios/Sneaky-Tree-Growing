@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Sneaky-Tree-Growing.iml" filepath="$PROJECT_DIR$/.idea/Sneaky-Tree-Growing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.qubikstudios.Sneaky-Tree-Growing.iml" filepath="$PROJECT_DIR$/.idea/modules/net.qubikstudios.Sneaky-Tree-Growing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stg-spigot.iml" filepath="$PROJECT_DIR$/.idea/modules/stg-spigot.iml" />
     </modules>
   </component>
 </project>

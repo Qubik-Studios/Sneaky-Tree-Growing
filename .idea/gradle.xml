@@ -23,26 +23,6 @@
           </set>
         </option>
       </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/SneakyTreeGrowingSpigot" />
-        <option name="gradleJvm" value="temurin-17" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/SneakyTreeGrowingSpigot" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/SneakyTreeGrowingSponge" />
-        <option name="gradleJvm" value="temurin-17" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/SneakyTreeGrowingSponge" />
-          </set>
-        </option>
-      </GradleProjectSettings>
     </option>
   </component>
 </project>

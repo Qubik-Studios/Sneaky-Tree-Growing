@@ -11,11 +11,10 @@ import net.qubikstudios.sneakytreegrowingforge.functions.Trigger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 @Mod("sneaky_tree_growing")
 public class SneakyTreeGrowingMod {
 
-    public static final String VERSION = "FORGE-1.19-1.9.0";
+    public static final String VERSION = "FORGE-1.19-1.9.1";
     public static final Logger LOGGER = LogManager.getLogger();
 
     public SneakyTreeGrowingMod() {

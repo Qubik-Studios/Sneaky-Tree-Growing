@@ -2,9 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="net.qubikstudios.Sneaky-Tree-Growing" target="1.8" />
+      <module name="net.qubikstudios.Sneaky-Tree-Growing.main" target="1.8" />
+      <module name="net.qubikstudios.Sneaky-Tree-Growing.test" target="1.8" />
       <module name="sneakytreegrowingspigot" target="17" />
       <module name="sneakytreegrowingspigot.main" target="17" />
       <module name="sneakytreegrowingspigot.test" target="17" />
+      <module name="stg-spigot" target="17" />
+      <module name="stg-spigot.main" target="17" />
+      <module name="stg-spigot.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
