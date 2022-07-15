@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "sneaky_tree_growing",
+  "version": "${version}",
+
+  "name": "Sneaky Tree Growing",
+  "description": "Sneak to grow Trees!",
+  "authors": [
+    "ConmineLP#8812",
+    "Maxthier#8158",
+    "Kleidukos#6654",
+    "Snail#5831 (Fabric Fix)"
+  ],
+  "contact": {
+    "homepage": "https://qubik-studios.net/",
+    "sources": "https://github.com/Qubik-Studios/Sneaky-Tree-Growing",
+    "issues": "https://github.com/Qubik-Studios/Sneaky-Tree-Growing/issues"
+  },
+
+  "license": "LGPLv3.0",
+  "icon": "assets/sneaky_tree_growing/logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.qubikstudios.sneakytreegrowingfabric.SneakyTreeGrowingMod"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": ">=1.19",
+    "java": ">=17"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/gzhqnFE"
+      }
+    }
+  }
+}
