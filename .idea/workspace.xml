@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b23b1c22-f363-4ae9-ae7d-79b52cafad93" name="Changes" comment="">
+    <list default="true" id="b23b1c22-f363-4ae9-ae7d-79b52cafad93" name="Changes" comment="Fixed Every Fabric Bug I saw might be some left will commit in next">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Snail" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="57de1189-39c5-4886-961e-5512c2b6d241" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/SneakyTreeGrowingMod.java" root0="FORCE_HIGHLIGHTING" />
@@ -100,7 +107,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.38089758",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -253,7 +260,18 @@
       <option name="presentableId" value="Default" />
       <updated>1653328693377</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed Every Fabric Bug I saw might be some left will commit in next">
+      <created>1657989824228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657989824228</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -265,5 +283,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Fixed Every Fabric Bug I saw might be some left will commit in next" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Every Fabric Bug I saw might be some left will commit in next" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
