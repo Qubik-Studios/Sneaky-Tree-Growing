@@ -5,28 +5,38 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.qubikstudios.sneakytreegrowingforge.config.MainConfig;
 
+import java.util.List;
+import java.util.Objects;
+
 @Mod.EventBusSubscriber
 public class Trigger {
-    public static void treeMealer(TickEvent.PlayerTickEvent event) {
-        if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
-        Entity entity = event.player;
-        Core.execute(entity.level, entity, MainConfig.COMMON.treeMealRadius.get(),
-                MainConfig.COMMON.treeMealChance.get(), "minecraft:saplings");
-    }
+    private static List<?> array;
 
-    public static void cropMealer(TickEvent.PlayerTickEvent event) {
+    public static void start(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
-        Core.execute(entity.level, entity, MainConfig.COMMON.cropMealRadius.get(),
-                MainConfig.COMMON.cropMealChance.get(), "minecraft:crops");
-    }
-
-    public static void customTagMealer(TickEvent.PlayerTickEvent event) {
-        if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
-        Entity entity = event.player;
-        for (String tag : MainConfig.COMMON.customTag.get()) {
-            Core.execute(entity.level, entity, MainConfig.COMMON.customTagMealRadius.get(),
-                    MainConfig.COMMON.customTagMealChance.get(), tag);
+        if (MainConfig.COMMON.enableCustomTag.get()) {
+            array = MainConfig.COMMON.customTag.get();
+        } else {
+            array = java.util.List.of("minecraft:saplings minecraft:crops".split("\s"));
+        }
+        for (Object tag : array) {
+            Core.execute(entity.level, entity, getRadius(tag), getChance(tag), tag.toString());
         }
     }
+
+    private static int getRadius(Object tag) {
+        if (tag.toString().contains("minecraft:saplings")) return MainConfig.COMMON.treeMealRadius.get();
+        if (tag.toString().contains("minecraft:crops") && MainConfig.COMMON.enableCropMeal.get())
+            return MainConfig.COMMON.cropMealRadius.get();
+        return 0;
+    }
+
+    private static int getChance(Object tag) {
+        if (tag.toString().contains("minecraft:saplings")) return MainConfig.COMMON.treeMealChance.get();
+        if (tag.toString().contains("minecraft:crops") && MainConfig.COMMON.enableCropMeal.get())
+            return MainConfig.COMMON.cropMealChance.get();
+        return 0;
+    }
+
 }

@@ -4,9 +4,9 @@ license = "GNU Lesser General Public License version 3 (LGPLv3)"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.9.0"
+version = "1.9.1"
 displayName = "Sneaky Tree Growing"
-credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654"
+credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654, Snail#5831 (Fabric Fix)"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
 authors = "Qubik Studios"

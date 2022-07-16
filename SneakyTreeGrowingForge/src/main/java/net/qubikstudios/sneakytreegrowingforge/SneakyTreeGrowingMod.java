@@ -34,16 +34,7 @@ public class SneakyTreeGrowingMod {
     private void initEvents() {
 
         //Register Events/Listener
-        MinecraftForge.EVENT_BUS.addListener(Trigger::treeMealer);
-        LOGGER.info("\u001b[32m[Sneaky Tree Growing] Enabled TreeMealer!\u001b[0m");
-        if (MainConfig.COMMON.enableCropMeal.get()) {
-            LOGGER.info("\u001b[32m[Sneaky Tree Growing] Crop Mealer active! To disable it go into the Config and set: \"Enable-Crop-Meal: true -> false\"\u001b[0m");
-            MinecraftForge.EVENT_BUS.addListener(Trigger::cropMealer);
-        }
-        if (MainConfig.COMMON.enableCustomTag.get()) {
-            LOGGER.info("\u001b[32m[Sneaky Tree Growing] Custom Tag Mealer active! To disable it go into the Config and set: \"Enable-Custom-Tag: true -> false\"\u001b[0m");
-            MinecraftForge.EVENT_BUS.addListener(Trigger::customTagMealer);
-        }
+        MinecraftForge.EVENT_BUS.addListener(Trigger::start);
     }
 
 }
