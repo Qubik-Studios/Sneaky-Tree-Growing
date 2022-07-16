@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23b1c22-f363-4ae9-ae7d-79b52cafad93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/SneakyTreeGrowingMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/SneakyTreeGrowingMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingFabric/src/main/java/net/qubikstudios/sneakytreegrowingfabric/functions/Trigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/SneakyTreeGrowingMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/SneakyTreeGrowingMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/functions/Trigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/java/net/qubikstudios/sneakytreegrowingforge/functions/Trigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/SneakyTreeGrowingForge/src/main/resources/META-INF/mods.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
