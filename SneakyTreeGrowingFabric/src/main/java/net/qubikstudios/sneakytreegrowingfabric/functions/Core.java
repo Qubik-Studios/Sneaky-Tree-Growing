@@ -1,9 +1,6 @@
 package net.qubikstudios.sneakytreegrowingfabric.functions;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
@@ -11,37 +8,13 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.qubikstudios.sneakytreegrowingfabric.SneakyTreeGrowingMod;
 
 public class Core {
 
     private static final ItemStack BONE_MEAL = new ItemStack(Items.BONE_MEAL);
 
-    private static boolean applyBonemealEffect(LevelAccessor world, BlockPos pos) {
-        if (world instanceof Level _level) {
-            SneakyTreeGrowingMod.LOGGER.info("Trying... \nTargeted Block:");
-            BlockState blockstate = _level.getBlockState(pos);
-            SneakyTreeGrowingMod.LOGGER.info(blockstate.getBlock().toString() + "| X:" + pos.getX() + " Y:" + pos.getY() + " Z:" + pos.getZ());
-            if (blockstate.getBlock() instanceof BonemealableBlock bonemealableblock) {
-                if (bonemealableblock.isValidBonemealTarget(_level, pos, blockstate, _level.isClientSide)) {
-                    if (bonemealableblock.isBonemealSuccess(_level, RandomSource.create(), pos, blockstate)) {
-                        BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, pos);
-                        BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, pos, Direction.UP);
-                        BoneMealItem.addGrowthParticles(_level, pos, 0);
-                    }
-                    SneakyTreeGrowingMod.LOGGER.info("Success!");
-                    return true;
-                }
-            }
-            SneakyTreeGrowingMod.LOGGER.info("Failed!");
-            return false;
-        }
-        return false;
-    }
 
-    public static void execute(ServerLevel world, Entity entity, Integer radius, double chance, String tag) {
+    public static void execute(LevelAccessor world, Entity entity, Integer radius, double chance, String tag) {
         double x;
         double y;
         double z;
@@ -50,12 +23,12 @@ public class Core {
 
 
         if (!entity.isShiftKeyDown()) {
-            entity.removeTag("isSneaking" + tag);
+            entity.removeTag("isSneaking");
             return;
         }
 
-        if (Math.random() < (chance / 100) && !entity.getTags().contains("isSneaking" + tag)) {
-            entity.addTag("isSneaking" + tag);
+        if (Math.random() < (chance / 100) && !entity.getTags().contains("isSneaking")) {
+            entity.addTag("isSneaking");
             x = value_raw / (-2);
             for (int a = 0; a < (int) (value_raw); a++) {
                 y = value_raw / (-2);
@@ -64,10 +37,9 @@ public class Core {
                     for (int c = 0; c < (int) (value_raw); c++) {
                         BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y), (int) (entity.getZ() + z));
                         if (world.getBlockState(pos).getBlock() != Blocks.AIR) {
-                            if (world.getBlockState(pos).getTags().toList().toString().contains(tag)) {
-
-                                if (applyBonemealEffect(world, pos)) {
-                                    world.levelEvent(2005, pos, 0);
+                            if (world instanceof Level _level && world.getBlockState(pos).getTags().toList().toString().contains(tag)) {
+                                if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, pos)) {
+                                    if (!_level.isClientSide()) _level.levelEvent(2005, pos, 0);
                                 }
                             }
                         }

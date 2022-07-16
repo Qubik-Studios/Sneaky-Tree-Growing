@@ -1,45 +1,45 @@
 package net.qubikstudios.sneakytreegrowingfabric.functions;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.qubikstudios.sneakytreegrowingfabric.config.MainConfig;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Trigger {
+    private static List<?> array;
 
-    public static void treeMealer() {
+    public static void meal() {
         ClientTickEvents.END_CLIENT_TICK.register((event) -> {
             if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused())
                 return;
             Entity entity = Objects.requireNonNull(event.getSingleplayerServer()).getPlayerList().getPlayer(event.player.getUUID());
-            assert entity != null;
-            Core.execute((ServerLevel) entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Radius"),
-                    MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Chance"), "minecraft:saplings");
-        });
-    }
-
-    public static void cropMealer() {
-        ClientTickEvents.END_CLIENT_TICK.register((event) -> {
-            if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused())
-                return;
-            Entity entity = Objects.requireNonNull(event.getSingleplayerServer()).getPlayerList().getPlayer(event.player.getUUID());
-            assert entity != null;
-            Core.execute((ServerLevel) entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Crop-Settings.Crop-Meal-Radius"), MainConfig.getInt("SneakyTreeGrowing.Crop-Settings.Crop-Meal-Chance"), "minecraft:crops");
-        });
-    }
-
-    public static void customTagMealer() {
-        ClientTickEvents.END_CLIENT_TICK.register((event) -> {
-            if (!event.isLocalServer() || event.player == null || event.player.isSpectator() || event.isPaused())
-                return;
-            Entity entity = Objects.requireNonNull(event.getSingleplayerServer()).getPlayerList().getPlayer(event.player.getUUID());
-            for (Object tag : MainConfig.getArray("SneakyTreeGrowing.Custom-Tag.Tag-List")) {
+            if (MainConfig.getBoolean("SneakyTreeGrowing.Custom-Tag.Enable-Custom-Tags")) {
+                array = MainConfig.getArray("SneakyTreeGrowing.Custom-Tag.Tag-List");
+            } else {
+                array = java.util.List.of("minecraft:saplings minecraft:crops".split("\s"));
+            }
+            for (Object tag : array) {
                 assert entity != null;
-                Core.execute((ServerLevel) entity.level, entity, MainConfig.getInt("SneakyTreeGrowing.Custom-Tag.Custom-Tags-Meal-Radius"),
-                        MainConfig.getInt("SneakyTreeGrowing.Custom-Tag.Custom-Tags-Meal-Chance"), tag.toString());
+                Core.execute(entity.level, entity, getRadius(tag), getChance(tag), tag.toString());
             }
         });
+    }
+
+    private static int getRadius(Object tag) {
+        if (tag.toString().contains("minecraft:saplings"))
+            return MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Radius");
+        if (tag.toString().contains("minecraft:crops") && MainConfig.getBoolean("SneakyTreeGrowing.Crop-Settings.Enable-Crop-Meal"))
+            return MainConfig.getInt("SneakyTreeGrowing.Crop-Settings.Crop-Meal-Radius");
+        return 0;
+    }
+
+    private static int getChance(Object tag) {
+        if (tag.toString().contains("minecraft:saplings"))
+            return MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Chance");
+        if (tag.toString().contains("minecraft:crops") && MainConfig.getBoolean("SneakyTreeGrowing.Crop-Settings.Enable-Crop-Meal"))
+            return MainConfig.getInt("SneakyTreeGrowing.Crop-Settings.Crop-Meal-Chance");
+        return 0;
     }
 }
