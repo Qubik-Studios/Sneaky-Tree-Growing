@@ -1,0 +1,16 @@
+name: "Sneaky Tree Growing"
+version: '${version}'
+main: net.qubikstudios.sneakytreegrowing.SneakyTreeGrowing
+api-version: 1.19
+authors: [ Kleidukos, Qubik Studios ]
+commands:
+  SneakyTreeGrowing:
+    usage: /stg toggle <tree/crops/tags>
+    description: Use toggle <tree/crops/tags> for toggle the growing modes
+    aliases:
+      - sneakygrowing
+      - stg
+permissions:
+  stg.toggle:
+    description: Allows you to use /stg toggle
+    default: op

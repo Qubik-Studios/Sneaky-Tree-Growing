@@ -1,0 +1,41 @@
+SneakyTreeGrowing:
+  TreeSettings:
+    # Changing this value to true will allow the plugin to apply the bonemeal effect to trees. Only works on plants
+    # Default value: true
+    EnableTreeMeal: true
+    # Increasing this value will change the area-of-effect from the plugin
+    # Default value: 6
+    # Range: 1 ~ 1000
+    TreeMealRadius: 6
+    # Changing this value will change the chance if a bonemeal effect gets applied or not
+    # Default value: 15
+    # Range: 1 ~ 100
+    TreeMealChance: 15
+  CropSettings:
+    # Changing this value to true will allow the plugin to apply the bonemeal effect to crops like wheat and potato. Only works on plants
+    # Default value: false
+    EnableCropMeal: false
+    # Increasing this value will change the area-of-effect from the crop meal effect
+    # Default value: 6
+    # Range: 1 ~ 25
+    CropMealRadius: 6
+    # Changing this value will change the chance if a bonemeal effect gets applied to crops or not
+    # Default value: 5
+    # Range: 1 ~ 50
+    CropMealChance: 5
+  CustomTag:
+    # Enable Custom tag support for the plugin.
+    # Default value: false
+    EnableCustomTags: false
+    # Increasing this value will change the area-of-effect from the custom-tag meal effect
+    # Default Value: 6
+    # Range: 1 ~ 1000
+    CustomTagsMealRadius: 6
+    # Changing this value will change the chance if a bonemeal effect gets applied to custom tags or not
+    # Default Value: 15
+    # Range: 1 ~ 1000
+    CustomTagsMealChance: 15
+    # All values added in this list will result in support for the bonemeal effect
+    TagList:
+      - minecraft:saplings
+      - minecraft:crops
