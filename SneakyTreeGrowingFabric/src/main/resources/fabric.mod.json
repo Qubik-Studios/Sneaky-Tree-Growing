@@ -35,6 +35,8 @@
   },
 
   "custom": {
+    "stopmodreposts:showToast": true,
+    "stopmodreposts:showButton": true,
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/gzhqnFE"

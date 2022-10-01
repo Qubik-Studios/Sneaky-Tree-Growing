@@ -10,11 +10,11 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class Trigger {
-    private static List<?> array;
 
     public static void start(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
+        List<?> array;
         if (MainConfig.COMMON.enableCustomTag.get()) {
             array = MainConfig.COMMON.customTag.get();
         } else {

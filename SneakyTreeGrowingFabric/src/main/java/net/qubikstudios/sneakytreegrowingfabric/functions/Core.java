@@ -1,10 +1,6 @@
 package net.qubikstudios.sneakytreegrowingfabric.functions;
 
-import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
@@ -12,15 +8,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.qubikstudios.sneakytreegrowingfabric.SneakyTreeGrowingMod;
 
 public class Core {
-
-    private static final ItemStack BONE_MEAL = new ItemStack(Items.BONE_MEAL);
-
 
     public static void execute(LevelAccessor world, Entity entity, Integer radius, double chance, String tag) {
         double x;
@@ -28,8 +17,6 @@ public class Core {
         double z;
         double value_raw;
         value_raw = radius;
-
-
 
         if (!entity.isShiftKeyDown()) {
             entity.removeTag("isSneaking");

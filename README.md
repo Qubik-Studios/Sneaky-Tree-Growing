@@ -16,7 +16,7 @@ There is no alternative download links/pages that are official maintained by Qub
 
 #### Official maintained Download Links
 <center>
-<a href="https://www.curseforge.com/minecraft/mc-mods/sneaky-tree-growing">Download nowon CurseForge</a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/sneaky-tree-growing">Download now on CurseForge</a>
 <a href="https://modrinth.com/mod/sneaky-tree-growing"><img src="https://raw.githubusercontent.com/modrinth/art/main/Branding/Badge/badge-dark__184x72.png"></a>
 </center>
 
