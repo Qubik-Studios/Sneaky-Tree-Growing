@@ -8,7 +8,7 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/Qubik-Studios/Sneaky-Tree-Growing?style=flat-square">
 </div>
 
-<p align="center">Like the project? Leave a 💖Follow on this Mod!</p>
+<p align="center">Like the project? Leave a Star🌟 on this Mod!</p>
 
 ## Downloads
 You can find downloads in the list below or by Compiling from source.
