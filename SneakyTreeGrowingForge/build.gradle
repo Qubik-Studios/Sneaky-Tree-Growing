@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.19.3-1.9.2'
+version = '1.10.0-DEV.MultiversionUpdate119.1'
 group = 'net.qubikstudios'
 archivesBaseName = 'FORGE-sneaky_tree_growing'
 
@@ -12,7 +12,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'official', version: '1.19.3'
+    mappings channel: 'official', version: '1.19'
     runs {
         client {
             workingDirectory project.file('run')
@@ -72,19 +72,19 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19.3-44.1.0'
+    minecraft 'net.minecraftforge:forge:1.19-41.1.0'
 }
 
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "Sneaky Tree Growing",
-                "Specification-Vendor"    : "Qubik Studios",
-                "Specification-Version"   : project.version,
-                "Implementation-Title"    : project.name,
-                "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "Qubik Studios",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            "Specification-Title"     : "Sneaky Tree Growing",
+        "Specification-Vendor"    : "Qubik Studios",
+        "Specification-Version"   : project.version,
+        "Implementation-Title"    : project.name,
+        "Implementation-Version"  : project.jar.archiveVersion,
+        "Implementation-Vendor"   : "Qubik Studios",
+        "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }

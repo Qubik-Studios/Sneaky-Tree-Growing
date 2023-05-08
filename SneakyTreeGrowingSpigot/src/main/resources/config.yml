@@ -1,41 +1,53 @@
 SneakyTreeGrowing:
   TreeSettings:
-    # Changing this value to true will allow the plugin to apply the bonemeal effect to trees. Only works on plants
+    # Need permission for growing the custom crop tags (stg.tree)
     # Default value: true
-    EnableTreeMeal: true
+    NeedPermission: true
+    # Changing this value to true will allow the mod to apply the bonemeal effect to trees. Only works on Vannila plants
+    # Default value: true
+    Enabled: true
     # Increasing this value will change the area-of-effect from the plugin
     # Default value: 6
     # Range: 1 ~ 1000
-    TreeMealRadius: 6
+    Radius: 6
     # Changing this value will change the chance if a bonemeal effect gets applied or not
     # Default value: 15
     # Range: 1 ~ 100
-    TreeMealChance: 15
+    Chance: 15
   CropSettings:
-    # Changing this value to true will allow the plugin to apply the bonemeal effect to crops like wheat and potato. Only works on plants
+    # Need permission for growing the crops (stg.crop)
     # Default value: false
-    EnableCropMeal: false
+    NeedPermission: false
+    # Changing this value to true will allow the mod to apply the bonemeal effect to crops like wheat and potato.
+    # Default value: false
+    Enabled: false
     # Increasing this value will change the area-of-effect from the crop meal effect
     # Default value: 6
-    # Range: 1 ~ 25
-    CropMealRadius: 6
+    # Range: 1 ~ 1000
+    Radius: 6
     # Changing this value will change the chance if a bonemeal effect gets applied to crops or not
     # Default value: 5
     # Range: 1 ~ 50
-    CropMealChance: 5
+    Chance: 5
   CustomTag:
+    # Need permission for growing the custom crop tags (stg.customtag)
+    # Default value: false
+    NeedPermission: false
     # Enable Custom tag support for the plugin.
     # Default value: false
-    EnableCustomTags: false
+    Enabled: false
     # Increasing this value will change the area-of-effect from the custom-tag meal effect
     # Default Value: 6
     # Range: 1 ~ 1000
-    CustomTagsMealRadius: 6
+    Radius: 6
     # Changing this value will change the chance if a bonemeal effect gets applied to custom tags or not
     # Default Value: 15
     # Range: 1 ~ 1000
-    CustomTagsMealChance: 15
+    Chance: 15
     # All values added in this list will result in support for the bonemeal effect
     TagList:
       - minecraft:saplings
       - minecraft:crops
+
+
+
