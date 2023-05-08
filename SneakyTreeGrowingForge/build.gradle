@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.10.0-DEV.MultiversionUpdate119.1'
+version = '1.10.0-DEV.MultiversionUpdate119.2'
 group = 'net.qubikstudios'
 archivesBaseName = 'FORGE-sneaky_tree_growing'
 

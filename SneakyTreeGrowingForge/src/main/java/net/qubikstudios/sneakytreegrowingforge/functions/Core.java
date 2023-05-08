@@ -2,6 +2,8 @@ package net.qubikstudios.sneakytreegrowingforge.functions;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.qubikstudios.sneakytreegrowingforge.config.AllowedBlockListConfig;
 import net.qubikstudios.sneakytreegrowingforge.config.MainConfig;
+import org.spongepowered.asm.mixin.Mutable;
 
 import java.util.ArrayList;
 
@@ -62,7 +65,7 @@ public class Core {
                 assert player != null;
                 Inventory playerInventory = player.getInventory();
                 if (!playerInventory.contains(new ItemStack(Items.BONE_MEAL))) {
-                    player.sendSystemMessage(Component.translatable("§8§l[§7Sneaky §6Tree §7Growing§8§l]§c Not enough Bone Meal in Inventory"));
+                    player.sendSystemMessage(Component.translatable("sneakytreegrowing.message.prefix").append(Component.translatable("sneakytreegrowing.message.insufficient.bone_meal")));
                     return;
                 }
                 for (int i = 0; i < playerInventory.getContainerSize(); i++) {

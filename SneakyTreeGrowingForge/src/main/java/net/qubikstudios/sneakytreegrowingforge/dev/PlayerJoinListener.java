@@ -10,10 +10,8 @@ public class PlayerJoinListener {
     public static void start(EntityJoinLevelEvent event) {
         if (event.getEntity() instanceof Player player) {
             player.sendSystemMessage(
-                    Component.translatable(
-                            "§8§l[§7Sneaky §6Tree §7Growing§8§l]§a This is a unstable Developer Build. Report any bugs you find." +
-                                    " http://discord.qubik-studios.net"
-                    )
+                    Component.translatable("sneakytreegrowing.message.prefix")
+                            .append(Component.translatable("sneakytreegrowing.message.devbuild"))
             );
         }
     }
