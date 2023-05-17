@@ -31,8 +31,6 @@ public final class MainConfig {
                     .defineInRange("Tree-Meal-Radius", defaultTreeMealRadius, 1, 1000);
             this.treeMealChance = builder.comment("Changing this value will change the chance if a Bone Meal effect gets applied or not\nDefault value: " + defaultTreeMealChance)
                     .defineInRange("Tree-Meal-Chance", defaultTreeMealChance, 1, 100);
-            builder.pop();
-            builder.push("In-Dev");
             builder.comment("Experimental In-Dev Features. Use with caution!");
             this.usePlayerBoneMeal = builder.comment("Removes one Bone Meal from player inventory when Bone Meal gets applied over Sneaky Tree Growing\nDefault value: " + defaultUsePlayerBoneMeal)
                     .define("Use-Inventory-Bone-Meal", defaultUsePlayerBoneMeal);

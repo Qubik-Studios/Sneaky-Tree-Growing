@@ -47,14 +47,12 @@ Tree-Meal-Radius = 6
 #Default value: 15
 #Range: 1 ~ 100
 Tree-Meal-Chance = 15
-
-[In-Dev]
-#Removes more Hunger when sneaking and effect gets applied
-#Default value: true
-Remove-Hunger = true
 #Removes one Bone Meal from player inventory when Bone Meal gets applied over Sneaky Tree Growing
 #Default value: false
 Use-Inventory-Bone-Meal = false
+#Removes more Hunger when sneaking and effect gets applied
+#Default value: true
+Remove-Hunger = true
 ```
 Location: `/<YourMCFolder>/config/Qubik Studios Mods/SneakyTreeGrowing/blockList.toml`
 ```toml

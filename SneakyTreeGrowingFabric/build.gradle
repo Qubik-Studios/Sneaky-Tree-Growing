@@ -18,7 +18,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.7.2'
-	include 'org.yaml:snakeyaml:1.30'
+	include 'org.yaml:snakeyaml:2.0'
 	include 'me.carleslc.Simple-YAML:Simple-Yaml:1.7.2'
 }
 

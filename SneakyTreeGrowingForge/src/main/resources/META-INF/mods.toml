@@ -5,9 +5,9 @@ issueTrackerURL="https://github.com/Qubik-Studios/Sneaky-Tree-Growing/issues"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.10.0-DEV.MultiversionUpdate119.1"
+version = "1.19.x-1.10.0"
 displayName = "Sneaky Tree Growing"
-credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654, Snail#5831 (Fabric Fix)"
+credits = "ConmineLP, Maxthier, Kleidukos, Snail (Fabric Fix)"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
 authors = "Qubik Studios"

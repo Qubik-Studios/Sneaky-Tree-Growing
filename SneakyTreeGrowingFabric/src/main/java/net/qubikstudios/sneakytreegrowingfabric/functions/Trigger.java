@@ -11,17 +11,8 @@ public class Trigger {
     public static void meal() {
         ClientTickEvents.END_CLIENT_TICK.register((event) -> {
             if (event.player == null || event.player.isSpectator() || event.isPaused() || event.level == null) return;
-            Entity entity = Objects.requireNonNull(event.getSingleplayerServer()).getPlayerList().getPlayer(event.player.getUUID());
-            Core.execute(entity.level, entity);
-        });
-
-        ServerTickEvents.END_SERVER_TICK.register(server -> {
-            if (server.getTickCount() % 20 == 0) {
-                for (ServerPlayer player : server.getPlayerList().getPlayers()) {
-                    Entity entity = server.getPlayerList().getPlayer(player.getUUID());
-                    Core.execute(entity.level, entity);
-                }
-            }
+            //Entity entity = Objects.requireNonNull(event.player);
+            Core.execute(event.player.level, event.player);
         });
     }
 }
