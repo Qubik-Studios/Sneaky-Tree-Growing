@@ -11,70 +11,59 @@
 <p align="center">Like the project? Leave a Star🌟 on this Mod!</p>
 
 ## Downloads
-You can find downloads in the list below or by Compiling from source.
-There is no alternative download links/pages that are official maintained by Qubik Studios when they are not shown here.
-
-#### Official maintained Download Links
-<center>
-<a href="https://www.curseforge.com/minecraft/mc-mods/sneaky-tree-growing">Download now on CurseForge</a>
-<a href="https://modrinth.com/mod/sneaky-tree-growing"><img src="https://raw.githubusercontent.com/modrinth/art/main/Branding/Badge/badge-dark__184x72.png"></a>
-</center>
+This is a Development Branche. Dou to this you can only find Downloads on our Discord.
 
 ## Features
 Sneak in a 6x6 area to apply Saplings a Bonemeal effect.
 You can change the radius and chance of this effect in the Config
 *You can also enable certain functions like a mode where it also apply the Bonemeal effect to seeds/crops. (Build in only works with Vanilla Minecraft seeds)
+### Upcomming Features:
+- Food level decreases while using this mod. (Can be changed over Config)
+- Abbility to remove bonemeal from Player Inventory
 
-## Custom Tags
+
+## Custom Tags and Blocks
 In the newest version you can now add tags from mods that are not supportet. As example you can add manually support for Dynamic tree's.
 Just go for that in the config and add your favorite mod tag in the section: "Custom-Tags = []"
 An example how you use the custom tag system is in the Config.
 
+Version 1.10 and up:<br>
+There is a new Config for Normal Blocks. You can add every Single block you like to get the Effect applied.
+
 ## Config
-#### Forge
+
+Starting with Version 1.10 of SneakyTreeGrowing the config is split into 2 parts making it incompatible for older Versions.
+We want to reduce the complicated overview of the file and with the Block-Tags.
+
+#### Forge Defaults
+Location: `/<YourMCFolder>/config/Qubik Studios Mods/SneakyTreeGrowing/main.toml`
 ```toml
 [SneakyTreeGrowing]
-	#Increasing this value will change the area-of-effect from the mod
-	#Default value: 6
-	#Range: 1 ~ 1000
-	Tree-Meal-Radius = 6
-	#Changing this value will change the chance if a bonemeal effect gets applied or not
-	#Default value: 15
-	#Range: 1 ~ 100
-	Tree-Meal-Chance = 100
-
-	[SneakyTreeGrowing.Crop-Settings]
-		#Changing this value to true will allow the mod to apply the bonemeal effect to crops like wheat and potato. Only works on Vannila plants
-		#Default value: false
-		Enable-Crop-Meal = false
-		#Increasing this value will change the area-of-effect from the crop meal effect
-		#Default value: 6
-		#Range: 1 ~ 25
-		Crop-Meal-Radius = 6
-		#Changing this value will change the chance if a bonemeal effect gets applied to crops or not
-		#Default value: 5
-		#Range: 1 ~ 50
-		Crop-Meal-Chance = 5
-
-	[SneakyTreeGrowing.Custom-Tag]
-		#Enable Custom tag support for the mod.
-		#Default value: false
-		Enable-Custom-Tags = false
-		#All values added in this list will result in support for the bonemeal effect. 
-		#Example: ["forge:seeds", "minecraft:crops"]
-		Custom-Tags = []
-		#Increasing this value will change the area-of-effect from the custom-tag meal effect
-		#Default Value: 6
-		#Range: 1 ~ 1000
-		Custom-Tags-Meal-Radius = 6
-		#Changing this value will change the chance if a bonemeal effect gets applied to custom tags or not
-		#Default Value: 15
-		#Range: 1 ~ 100
-		Custom-Tags-Meal-Chance = 15
+#Increasing this value will change the area-of-effect from the mod
+#Default value: 6
+#Range: 1 ~ 1000
+Tree-Meal-Radius = 6
+#Changing this value will change the chance if a Bone Meal effect gets applied or not
+#Default value: 15
+#Range: 1 ~ 100
+Tree-Meal-Chance = 15
+#Removes one Bone Meal from player inventory when Bone Meal gets applied over Sneaky Tree Growing
+#Default value: false
+Use-Inventory-Bone-Meal = false
+#Removes more Hunger when sneaking and effect gets applied
+#Default value: true
+Remove-Hunger = true
 ```
-The Config is located at: "/\<YourMCFolder\>/config/Qubik Studios Mods/sneakytreegrowing.toml"
+Location: `/<YourMCFolder>/config/Qubik Studios Mods/SneakyTreeGrowing/blockList.toml`
+```toml
+[Allowed-Blocks]
+	#Here you can add every block you like to get a Bone Meal effect applied.
+	Block-List = ["minecraft:bamboo", "minecraft:brown_mushroom", "minecraft:red_mushroom", "minecraft:wheat_seeds", "minecraft:carrots", "minecraft:potatoes", "minecraft:beetroots", "minecraft:melon_stem", "minecraft:pumpkin_stem", "minecraft:big_dripleaf", "minecraft:small_dripleaf"]
+	#Here you can add block Tags for easier use of this mod.
+	Tag-List = ["minecraft:crops", "minecraft:saplings"]
+```
 
-#### Fabric
+#### Fabric Defaults
 ```yaml
 SneakyTreeGrowing:
   # Increasing this value will change the area-of-effect from the mod

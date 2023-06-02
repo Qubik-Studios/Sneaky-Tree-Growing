@@ -1,50 +1,92 @@
 package net.qubikstudios.sneakytreegrowingfabric.functions;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Blocks;
+import net.qubikstudios.sneakytreegrowingfabric.config.AllowedBlockListConfig;
+import net.qubikstudios.sneakytreegrowingfabric.config.MainConfig;
+
+import java.util.ArrayList;
 
 public class Core {
-
-    public static void execute(LevelAccessor world, Entity entity, Integer radius, double chance, String tag) {
-        double x;
-        double y;
-        double z;
-        double value_raw;
-        value_raw = radius;
+    public static void execute(LevelAccessor world, Entity entity) {
+        double x, y, z;
+        double halfValueRaw = MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Radius") / 2.0;
 
         if (!entity.isShiftKeyDown()) {
-            entity.removeTag("isSneaking");
+            entity.removeTag("isSneaked");
             return;
         }
 
-        if (Math.random() < (chance / 100) && !entity.getTags().contains("isSneaking")) {
-            entity.addTag("isSneaking");
-            x = value_raw / (-2);
-            for (int a = 0; a < (int) (value_raw); a++) {
-                y = value_raw / (-2);
-                for (int b = 0; b < (int) (value_raw); b++) {
-                    z = value_raw / (-2);
-                    for (int c = 0; c < (int) (value_raw); c++) {
-                        BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y), (int) (entity.getZ() + z));
-                        if (world.getBlockState(pos).getBlock() != Blocks.AIR) {
-                            if (world instanceof Level _level && world.getBlockState(pos).getTags().toList().toString().contains(tag)) {
-                                if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, pos)) {
-                                    if (!_level.isClientSide()) _level.levelEvent(2005, pos, 0);
-                                }
+        if (Math.random() < ((float) MainConfig.getInt("SneakyTreeGrowing.Tree-Meal-Chance") / 120) && !entity.getTags().contains("isSneaked")) {
+            entity.addTag("isSneaked");
+            for (x = -halfValueRaw; x < halfValueRaw; x++) {
+                for (y = -halfValueRaw; y < halfValueRaw; y++) {
+                    for (z = -halfValueRaw; z < halfValueRaw; z++) {
+                        BlockPos pos = new BlockPos(entity.getX() + x, entity.getY() + y + 1, entity.getZ() + z);
+                        ArrayList<String> blocks = (ArrayList<String>) AllowedBlockListConfig.getArray("Allowed-Blocks.Block-List");
+                        if (!blocks.isEmpty()) {
+                            for (String target : blocks) {
+                                if (!world.getBlockState(pos).isAir())
+                                    mealLocation(world, entity, target, pos, MainConfig.getBoolean("In-Dev.Use-Inventory-Bone-Meal"), false);
                             }
                         }
-                        z = z + 1;
+                        ArrayList<String> tags = (ArrayList<String>) AllowedBlockListConfig.getArray("Allowed-Blocks.Tag-List");
+                        if (!tags.isEmpty()) {
+                            for (String target : tags) {
+                                if (!world.getBlockState(pos).isAir())
+                                    mealLocation(world, entity, target, pos, MainConfig.getBoolean("In-Dev.Use-Inventory-Bone-Meal"), true);
+                            }
+                        }
                     }
-                    y = y + 1;
                 }
-                x = x + 1;
             }
+        }
+    }
+
+    private static void mealLocation(LevelAccessor world, Entity entity, String target, BlockPos pos, boolean removeItem, boolean isTag) {
+        if (!world.getBlockState(pos).getBlock().toString().contains(target)) return;
+        if (isTag && !world.getBlockState(pos).getTags().toList().toString().contains(target)) return;
+        Player player = world.getPlayerByUUID(entity.getUUID());
+        if (world instanceof Level _level) {
+            if (removeItem) {
+                boneMealEffect(_level, pos, player);
+                assert player != null;
+                Inventory playerInventory = player.getInventory();
+                if (!playerInventory.contains(new ItemStack(Items.BONE_MEAL)))
+                    player.sendSystemMessage(Component.translatable("§8§l[§7Sneaky §6Tree §7Growing§8§l]§c Not enough Bone Meal in Inventory"));
+                for (int i = 0; i < playerInventory.getContainerSize(); i++) {
+                    ItemStack stack = playerInventory.getItem(i);
+                    if (stack.is(Items.BONE_MEAL)) {
+                        stack.shrink(1);
+                        break;
+                    }
+                }
+            } else {
+                boneMealEffect(_level, pos, player);
+            }
+        }
+    }
+
+    private static void boneMealEffect(Level _level, BlockPos pos, Player player) {
+        ItemStack boneMealStack = Items.BONE_MEAL.getDefaultInstance();
+        if (BoneMealItem.growCrop(boneMealStack, _level, pos)) {
+            if (!_level.isClientSide()) _level.levelEvent(2005, pos, 0);
+        }
+
+        if ((!player.isCreative() || !player.isSpectator()) && MainConfig.getBoolean("In-Dev.Remove-Hunger")) {
+            FoodData food = player.getFoodData();
+            int remove = (food.getFoodLevel() - ((int) (Math.random() * (1)) + 1));
+            if (Math.random() < (Math.random() / 75)) return;
+            if (food.getFoodLevel() > remove && !food.needsFood()) food.setFoodLevel(remove);
         }
     }
 }

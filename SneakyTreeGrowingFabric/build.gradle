@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.1-SNAPSHOT'
 }
 
 version = project.mod_version
@@ -18,7 +18,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	implementation 'me.carleslc.Simple-YAML:Simple-Yaml:1.7.2'
-	include 'org.yaml:snakeyaml:1.30'
+	include 'org.yaml:snakeyaml:2.0'
 	include 'me.carleslc.Simple-YAML:Simple-Yaml:1.7.2'
 }
 

@@ -1,12 +1,13 @@
 modLoader = "javafml"
-loaderVersion = "[44,)"
+loaderVersion = "[41,)"
 license = "GNU Lesser General Public License version 3 (LGPLv3)"
+issueTrackerURL="https://github.com/Qubik-Studios/Sneaky-Tree-Growing/issues"
 
 [[mods]]
 modId = "sneaky_tree_growing"
-version = "1.9.2"
+version = "1.19.x-1.10.0"
 displayName = "Sneaky Tree Growing"
-credits = "ConmineLP#8812, Maxthier#8158, Kleidukos#6654, Snail#5831 (Fabric Fix)"
+credits = "ConmineLP, Maxthier, Kleidukos, Snail (Fabric Fix)"
 displayURL = "https://qubik-studios.net"
 logoFile = "logo.png"
 authors = "Qubik Studios"
@@ -16,14 +17,14 @@ description = "Sneak to grow Trees!"
 [[dependencies.sneaky_tree_growing]]
 modId = "forge"
 mandatory = true
-versionRange = "[44,)"
+versionRange = "[41,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.sneaky_tree_growing]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.3,)"
+versionRange = "[1.19,1.20)"
 ordering = "NONE"
 side = "BOTH"
 

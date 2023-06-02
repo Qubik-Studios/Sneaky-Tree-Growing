@@ -6,35 +6,24 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.qubikstudios.sneakytreegrowingforge.config.AllowedBlockListConfig;
 import net.qubikstudios.sneakytreegrowingforge.config.MainConfig;
-import net.qubikstudios.sneakytreegrowingforge.functions.Trigger;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.qubikstudios.sneakytreegrowingforge.functions.PlayerTickListener;
 
 @Mod("sneaky_tree_growing")
 public class SneakyTreeGrowingMod {
-
-    public static final String VERSION = "FORGE-1.19.3-1.9.2";
-    public static final Logger LOGGER = LogManager.getLogger();
+    public static final MainConfig.Common CONFIG = MainConfig.COMMON;
 
     public SneakyTreeGrowingMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfig.COMMON_SPEC, "Qubik Studios Mods/SneakyTreeGrowing/main.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, AllowedBlockListConfig.COMMON_SPEC, "Qubik Studios Mods/SneakyTreeGrowing/blockList.toml");
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MainConfig.COMMON_SPEC, "Qubik Studios Mods/sneakytreegrowing.toml");
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        LOGGER.info("\u001b[32m[Sneaky Tree Growing] Found Version: " + VERSION + "\u001b[0m");
-        initEvents();
+        MinecraftForge.EVENT_BUS.addListener(PlayerTickListener::start);
     }
-
-    private void initEvents() {
-
-        //Register Events/Listener
-        MinecraftForge.EVENT_BUS.addListener(Trigger::start);
-    }
-
 }
