@@ -36,7 +36,7 @@ public class Core {
             for (x = -halfValueRaw; x < halfValueRaw; x++) {
                 for (y = -halfValueRaw; y < halfValueRaw; y++) {
                     for (z = -halfValueRaw; z < halfValueRaw; z++) {
-                        BlockPos pos = new BlockPos(entity.getX() + x, entity.getY() + y + 1, entity.getZ() + z);
+                        BlockPos pos = new BlockPos((int) (entity.getX() + x), (int) (entity.getY() + y + 1), (int) (entity.getZ() + z));
                         ArrayList<String> blocks = AllowedBlockListConfig.COMMON_BLOCKS.blockList.get();
                         for (String target : blocks) {
                             if (!world.getBlockState(pos).isAir())

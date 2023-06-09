@@ -10,6 +10,6 @@ public class PlayerTickListener {
     public static void start(TickEvent.PlayerTickEvent event) {
         if (event.player == null || event.player.isSpectator() || event.phase != TickEvent.Phase.END) return;
         Entity entity = event.player;
-        Core.execute(entity.level, entity);
+        Core.execute(entity.level(), entity);
     }
 }

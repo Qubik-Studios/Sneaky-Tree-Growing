@@ -22,8 +22,4 @@ eclipse
 run
 
 # Files from Forge MDK
-changelog.txt
-LICENSE.txt
-README.txt
-CREDITS.txt
-/new_build.gradle
+forge*changelog.txt
