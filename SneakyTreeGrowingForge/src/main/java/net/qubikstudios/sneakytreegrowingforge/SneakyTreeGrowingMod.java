@@ -8,6 +8,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qubikstudios.sneakytreegrowingforge.config.AllowedBlockListConfig;
 import net.qubikstudios.sneakytreegrowingforge.config.MainConfig;
+import net.qubikstudios.sneakytreegrowingforge.dev.PlayerJoinListener;
 import net.qubikstudios.sneakytreegrowingforge.functions.PlayerTickListener;
 
 @Mod("sneaky_tree_growing")
@@ -25,5 +26,6 @@ public class SneakyTreeGrowingMod {
 
     private void setup(final FMLCommonSetupEvent event) {
         MinecraftForge.EVENT_BUS.addListener(PlayerTickListener::start);
+        MinecraftForge.EVENT_BUS.addListener(PlayerJoinListener::start);
     }
 }

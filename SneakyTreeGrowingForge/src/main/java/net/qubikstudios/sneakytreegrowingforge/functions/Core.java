@@ -2,8 +2,9 @@ package net.qubikstudios.sneakytreegrowingforge.functions;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.contents.TranslatableContents;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +16,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.qubikstudios.sneakytreegrowingforge.config.AllowedBlockListConfig;
 import net.qubikstudios.sneakytreegrowingforge.config.MainConfig;
-import org.spongepowered.asm.mixin.Mutable;
 
 import java.util.ArrayList;
 
@@ -56,8 +56,11 @@ public class Core {
     }
 
     private static void mealLocation(LevelAccessor world, Entity entity, String target, BlockPos pos, boolean removeItem, boolean isTag) {
+        Component message = new TranslatableComponent("sneakytreegrowing.message.prefix").append(new TranslatableComponent("sneakytreegrowing.message.insufficient.bone_meal"));
+
         if (!isTag && !world.getBlockState(pos).getBlock().toString().contains(target)) return;
-        if (isTag && !world.getBlockState(pos).getTags().toList().toString().contains(target)) return;
+        if (isTag && !BlockTags.getAllTags().getTagOrEmpty(new ResourceLocation(target)).contains((world.getBlockState(pos).getBlock())))
+            return;
         Player player = world.getPlayerByUUID(entity.getUUID());
         if (world instanceof Level _level) {
             if (removeItem) {
@@ -65,7 +68,7 @@ public class Core {
                 assert player != null;
                 Inventory playerInventory = player.getInventory();
                 if (!playerInventory.contains(new ItemStack(Items.BONE_MEAL))) {
-                    player.sendSystemMessage(Component.translatable("sneakytreegrowing.message.prefix").append(Component.translatable("sneakytreegrowing.message.insufficient.bone_meal")));
+                    player.sendMessage(message, player.getUUID());
                     return;
                 }
                 for (int i = 0; i < playerInventory.getContainerSize(); i++) {
