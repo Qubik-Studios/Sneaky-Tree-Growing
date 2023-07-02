@@ -26,6 +26,5 @@ public class SneakyTreeGrowingMod {
 
     private void setup(final FMLCommonSetupEvent event) {
         MinecraftForge.EVENT_BUS.addListener(PlayerTickListener::start);
-        MinecraftForge.EVENT_BUS.addListener(PlayerJoinListener::start);
     }
 }
