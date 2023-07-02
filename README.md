@@ -11,7 +11,7 @@
 
 ## Downloads
 
-You can find downloads in the list below or by Compiling from source. There is no alternative download links/pages that
+You can find downloads in the list below or by compiling from source. There is no alternative download links/pages that
 are official maintained by Qubik Studios when they are not shown here.
 <br>
 
@@ -41,11 +41,11 @@ Furthermore, you have the option to remove Bone-meal from your inventory with ea
 
 ## Custom Tags and Blocks
 
-In the newest version you can now add tags from mods that are not supported. As example, you can add manually support
+In the newest version, you can now add tags from mods that are not supported. As example, you can add manually support
 for
 Dynamic tree's.
 Just go for that in the config and add your favorite mod tag in the section: "Custom-Tags = []"
-An example how you use the custom tag system is in the Config.
+An example of how you use the custom tag system is in the Config.
 
 Version 1.10 and up:<br>
 There is a new Config for Normal Blocks. You can add every Single block you like to get the Effect applied.
@@ -91,8 +91,8 @@ Tag-List = ["minecraft:crops", "minecraft:saplings"]
 ## Note on Mod-pack creators and Disseminator
 
 You can use this mod for free in your Mod-pack. Just make sure to credit this mod.
-If you want to republish this mod on another platform you have to join our Discord and ask the Developer.
-Reselling of this mod is prohibited! If you bought this mod please join our Discord and report the person who was
+If you want to republish this mod on another platform, you have to join our Discord and ask the Developer.
+Reselling of this mod is prohibited! If you bought this mod, please join our Discord and report the person who was
 selling this to you.
 
 ## Need Help? Join our Discord!
